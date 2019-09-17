@@ -159,10 +159,10 @@ class MainActivity : BaseActivity(),
 
     override fun displayProgressBar(bool: Boolean){
         if(bool){
-            progress_bar.visibility = View.VISIBLE
+            lottie_progress_bar.visibility = View.VISIBLE
         }
         else{
-            progress_bar.visibility = View.GONE
+            lottie_progress_bar.visibility = View.GONE
         }
     }
 

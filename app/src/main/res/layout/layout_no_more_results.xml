@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
-                android:layout_height="@dimen/recycler_loading_view_height"
-                xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/recycler_loading_view_height">
 
     <TextView
+            android:id="@+id/no_results_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No more results..."
-            android:drawableEnd="@drawable/ic_mood_bad_black_24dp"
             android:layout_centerInParent="true"
-            android:padding="5dp"
-            android:drawablePadding="5dp"/>
+            android:text="@string/no_more_results" />
+
+    <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_no_results"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@id/no_results_tv"
+            android:layout_centerVertical="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="no_results_lottie.json"
+            app:lottie_loop="true"
+            app:lottie_speed="0.5"/>
 
 </RelativeLayout>
